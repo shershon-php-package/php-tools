@@ -17,7 +17,7 @@ $aesKey = 'aabbaabbaabbaabb';
 $encryForAes = EncryptTools::encrypt($data, EncryptTools::AES, $aesKey);
 $result['aes-加密结果'] = $encryForAes;
 $result['aes-解密结果'] = EncryptTools::decrypt($encryForAes, EncryptTools::AES, $aesKey);
-// print_r($result);
+print_r($result);
 /*
  Array
 (

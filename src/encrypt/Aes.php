@@ -4,7 +4,7 @@
 namespace phpTools\encrypt;
 
 
-Class Aes
+class Aes
 {
     const AES_ECB = 'ECB';
     const AES_CBC = 'CBC';
@@ -28,7 +28,6 @@ Class Aes
     }
 
 
-
     /**
      * @description: 加密
      * @param $key
@@ -46,19 +45,6 @@ Class Aes
         }
         return '';
     }
-
-    /**
-     * @param $text
-     * @param $blockSize
-     * @return string
-     */
-    public static function PKCS5Padding($text, $blockSize)
-    {
-        $pad = $blockSize - (strlen($text) % $blockSize);
-
-        return $text . str_repeat(chr($pad), $pad);
-    }
-
 
     /**
      * @description: 解密
@@ -123,4 +109,17 @@ Class Aes
         }
         return $mode;
     }
+
+    /**
+     * @param $text
+     * @param $blockSize
+     * @return string
+     */
+    public static function PKCS5Padding($text, $blockSize)
+    {
+        $pad = $blockSize - (strlen($text) % $blockSize);
+
+        return $text . str_repeat(chr($pad), $pad);
+    }
+
 }

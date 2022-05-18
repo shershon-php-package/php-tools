@@ -4,7 +4,7 @@
 namespace phpTools\encrypt;
 
 
-Class Rsa
+class Rsa
 {
 
     public static function openssl_public_encrypt($str, &$encrypt, $publicKey)

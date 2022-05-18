@@ -25,17 +25,6 @@ class S3Des
     }
 
     /**
-     * @param $text
-     * @param $blocksize
-     * @return string
-     */
-    private static function pkcs5_pad($text, $blocksize)
-    {
-        $pad = $blocksize - (strlen($text) % $blocksize);
-        return $text . str_repeat(chr($pad), $pad);
-    }
-
-    /**
      * @description: 解密
      * @param $key
      * @param $encrypted
@@ -47,7 +36,19 @@ class S3Des
         $encrypted = base64_decode($encrypted);
         $key = str_pad($key, 24, '0');
         $decrypted = openssl_decrypt($encrypted, 'des-ede3', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, '');
-        return self::pkcs5_unpad($decrypted);
+        //return self::pkcs5_unpad($decrypted);
+        return $decrypted;
+    }
+
+    /**
+     * @param $text
+     * @param $blocksize
+     * @return string
+     */
+    private static function pkcs5_pad($text, $blocksize)
+    {
+        $pad = $blocksize - (strlen($text) % $blocksize);
+        return $text . str_repeat(chr($pad), $pad);
     }
 
     /**
