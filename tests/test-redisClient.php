@@ -1,9 +1,9 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $config = [
-    'host' => 'redis',
+    'host' => '127.0.0.1',
     'db' => 1,
     'port' => '6379',
     'prefix' => 'YA:',// key的前缀，下面例子中的key -> YA:test
