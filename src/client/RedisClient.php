@@ -29,10 +29,12 @@ class RedisClient
      * @var object
      */
     private static $_client;
+
     /**
      * @var array
      */
     private static $_config;
+
     /**
      * 是否启用长连接
      *
@@ -56,7 +58,6 @@ class RedisClient
         self::$_usePersistent = $usePersistent;
     }
 
-
     /**
      * @description: 单例的方式连接redis
      * @param $config
@@ -70,12 +71,12 @@ class RedisClient
             throw new Exception('redis扩展未安装');
         }
         $instanceKey = md5(serialize($config));
-        if (!self::$_client[$instanceKey]) {
+        if (!isset(self::$_client[$instanceKey])) {
             self::$_client[$instanceKey] = $redis = new \Redis();
-            self::$_config = [
-                'host' => $config['host'],
-                'port' => $config['port'],
-                'db' => self::DEFAULT_DB,
+            self::$_config               = [
+                'host'    => $config['host'],
+                'port'    => $config['port'],
+                'db'      => self::DEFAULT_DB,
                 'timeout' => $config['timeout'] ?? 5
             ];
             if (!empty($config)) {

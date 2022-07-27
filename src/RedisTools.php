@@ -32,6 +32,11 @@ class RedisTools
      */
     protected $randomNum;
 
+    /**
+     * @var array 连接配置
+     */
+    protected $config;
+
     public function __construct($lockKey, $expireTime, $maxTimes = 50)
     {
         $this->lockKey    = $lockKey;
@@ -39,18 +44,27 @@ class RedisTools
         $this->maxTimes   = $maxTimes;
         $this->redis      = new \Redis();
         $this->randomNum  = mt_rand(1, 100000);
+        $this->config     = ['host' => '127.0.0.1', 'port' => 6379];
+    }
+
+    /**
+     * 连接Redis
+     * @return void
+     */
+    public function connect() {
+        $this->redis->connect($this->config['host'], $this->config['port']);
     }
 
     /**
      * 获取分布式锁
-     * @return void
+     * @return bool
      */
     public function getLock()
     {
         $runNumber = 0;
         while (1) {
             $runNumber++;
-            $ret = $this->redis->setNx($this->lockKey, time());
+            $ret = $this->redis->setNx($this->lockKey, $this->randomNum);
             if ($ret) {
                 $this->redis->expire($this->lockKey, $this->expireTime);
                 break;
@@ -60,15 +74,16 @@ class RedisTools
             }
             usleep(100000);
         }
+        return $ret;
     }
 
     /**
      * 删除分布式锁
-     * @return void
+     * @return int
      */
     public function delLock()
     {
-        $this->redis->del($this->lockKey);
+        return $this->redis->del($this->lockKey);
     }
 
     /**
@@ -78,8 +93,8 @@ class RedisTools
     public function getAotomicLock()
     {
         // SET key value [EX seconds] [PX milliseconds] [NX|XX]
-        return $this->redis->executeCommand('SET', [$this->lockKey, $this->randomNum, 'EX', $this->expireTime, 'NX']);
-        //return $this->redis->set($this->nxKey, $this->token, ["nx", "ex" => 10]);
+//        return $this->redis->executeCommand('SET', [$this->lockKey, $this->randomNum, 'EX', $this->expireTime, 'NX']);
+        return $this->redis->set($this->lockKey, $this->randomNum, ["nx", "ex" => $this->expireTime]);
     }
 
     /**
@@ -97,7 +112,7 @@ class RedisTools
             end
         ';
         // EVAL script numkeys key [key ...] arg [arg ...]
-        return $this->redis->executeCommand('EVAL', [$script, 1, $this->lockKey, $this->randomNum]);
-        //return $this->redis->eval($script, [$this->nxKey, $this->token], 1);
+//        return $this->redis->executeCommand('EVAL', [$script, 1, $this->lockKey, $this->randomNum]);
+        return $this->redis->eval($script, [$this->lockKey, $this->randomNum], 1);
     }
 }
