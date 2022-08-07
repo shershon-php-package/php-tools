@@ -6,15 +6,15 @@ use phpTools\EncryptTools;
 
 ######################################### 对称加密 #######################################
 // 3des加解密，key要24位，不够的话程序会自动补零
-$s3desKey = 'aaaassssbbbggggjjjkkkeee';
-$data = 'hello word';
-$result['原文'] = $data;
+$s3desKey            = 'aaaassssbbbggggjjjkkkeee';
+$data                = 'hello word';
+$result['原文']        = $data;
 $result['3des-秘钥长度'] = strlen($s3desKey);
 $result['3des-加密结果'] = $encryFor3des = EncryptTools::encrypt($data, EncryptTools::STD3DES, $s3desKey);
 $result['3des-解密结果'] = EncryptTools::decrypt($encryFor3des, EncryptTools::STD3DES, $s3desKey);
 // aes加解密
-$aesKey = 'aabbaabbaabbaabb';
-$encryForAes = EncryptTools::encrypt($data, EncryptTools::AES, $aesKey);
+$aesKey             = 'aabbaabbaabbaabb';
+$encryForAes        = EncryptTools::encrypt($data, EncryptTools::AES, $aesKey);
 $result['aes-加密结果'] = $encryForAes;
 $result['aes-解密结果'] = EncryptTools::decrypt($encryForAes, EncryptTools::AES, $aesKey);
 print_r($result);
@@ -40,7 +40,7 @@ WLl28uI2r/ckk58OxEkLfmtcJKpwB+CMWqLwzeGnpmRC4KYrf+cXjTKc+UXNBQZZ
 I8LpLEo1nt6zTKfBIwIDAQAB
 -----END PUBLIC KEY-----';
 // 私钥
-$privateKey = '-----BEGIN PRIVATE KEY-----
+$privateKey         = '-----BEGIN PRIVATE KEY-----
 MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAK5zecbF7tm/atpx
 x4CzjtO8ZmgHoQDm0i+bPTAi58KPQrqe5lUeyzX9IhcS1Pieav5mPvLNppkNPcs1
 3lOPOzUb3YRYuXby4jav9ySTnw7ESQt+a1wkqnAH4IxaovDN4aemZELgpit/5xeN
@@ -57,22 +57,22 @@ LMGh+3IzuMiFUFWr4t0uLBqp4ISEcB3E1bMfctdK3VXgsbJbAGzwj+AuWMApUy4X
 3OwheU/1Lk2dEB8=
 -----END PRIVATE KEY-----
 ';
-$secretKey = 'secret_key';
-$url = 'http://127.0.0.1/encrypt/server.php?';
-$params['appKey'] = 'app_key';
-$params['orderId'] = 100;
-$params['name'] = 'zhangsan';
+$secretKey          = 'secret_key';
+$url                = 'http://127.0.0.1/encrypt/server.php?';
+$params['appKey']   = 'app_key';
+$params['orderId']  = 100;
+$params['name']     = 'zhangsan';
 $params['password'] = '123456';
-$params['time'] = time();
-$queryString = http_build_query($params);
+$params['time']     = time();
+$queryString        = http_build_query($params);
 // 生成摘要
-$sign = EncryptTools::getSign($params, $secretKey);
+$sign        = EncryptTools::getSign($params, $secretKey);
 $queryString .= "&sign=" . $sign;
-$encrypt = ''; // 密文
+$encrypt     = ''; // 密文
 EncryptTools::rsaEncrypt($queryString, $encrypt, $publicKey);
-$encrypt = urlencode($encrypt);
-$url .= "q=" . $encrypt;
-$decrypt = ''; // 明文
+$encrypt  = urlencode($encrypt);
+$url      .= "q=" . $encrypt;
+$decrypt  = ''; // 明文
 $queryStr = parse_url($url)['query'];
 parse_str($queryStr, $queryArr);
 EncryptTools::rsaDecrypt($queryArr['q'], $decrypt, $privateKey);

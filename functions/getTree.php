@@ -26,7 +26,7 @@ function getTree2($arr, $pid = 0, $level = 0)
         // 判断子类的父级id 是否等于 父级的id
         if ($v['pid'] == $pid) {
             $v['level'] = $level;
-            $list[] = $v;
+            $list[]     = $v;
             unset($arr[$k]); // 删除已排好的数据，减少循环次数
             getTree($arr, $v['id'], $level + 1);
         }

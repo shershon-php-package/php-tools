@@ -4,27 +4,27 @@ require_once '../vendor/autoload.php';
 
 use phpTools\ImageTools;
 
-$src = __DIR__ . '/../public/img/001.jpg';
+$src      = __DIR__ . '/../public/img/001.jpg';
 $font_url = __DIR__ . '/../public/font/msyh.ttf';
-$source = __DIR__ . '/../public/img/002.gif';
-$local = array(
+$source   = __DIR__ . '/../public/img/002.gif';
+$local    = array(
     'x' => 50,
     'y' => 400,
 );
-$content = 'hello,world';
-$size = 20;
-$color = array(
+$content  = 'hello,world';
+$size     = 20;
+$color    = array(
     0 => 255,
     1 => 0,
     2 => 0,
 );
-$local2 = array(
+$local2   = array(
     'x' => 250,
     'y' => 60,
 );
-$angle = 10;
-$alpha = 50;
-$image = new ImageTools($src);
+$angle    = 10;
+$alpha    = 50;
+$image    = new ImageTools($src);
 $image->imageMark($source, $local, $alpha);
 $image->thumb(400, 300);
 $image->fontMark($content, $font_url, $size, $color, $local2, $angle);
