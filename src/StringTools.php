@@ -1,11 +1,7 @@
 <?php
-/**
- * @Description: 字符串处理工具
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 11:51 上午
- */
 
 namespace phpTools;
+
 /**
  * @Description: 字符串相关操作
  * @Class StringTools

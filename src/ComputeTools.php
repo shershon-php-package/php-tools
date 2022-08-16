@@ -1,13 +1,6 @@
 <?php
-/**
- * @Description:
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 2:25 下午
- */
-
 
 namespace phpTools;
-
 
 /**
  * @Description: 计算相关的操作
@@ -28,8 +21,8 @@ class ComputeTools
             return $value;
         } else {
             $value_length = strlen($value);
-            $qty = (int)substr($value, 0, $value_length - 1);
-            $unit = strtolower(substr($value, $value_length - 1));
+            $qty          = (int)substr($value, 0, $value_length - 1);
+            $unit         = strtolower(substr($value, $value_length - 1));
             switch ($unit) {
                 case 'k':
                     $qty *= 1024;

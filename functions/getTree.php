@@ -1,8 +1,4 @@
 <?php
-/**
- * @date: 2022/7/8
- * @createTime: 13:57
- */
 
 // 循环迭代
 function getTree($items)

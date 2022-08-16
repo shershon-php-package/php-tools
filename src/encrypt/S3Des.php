@@ -1,7 +1,7 @@
 <?php
 
-
 namespace phpTools\encrypt;
+
 /**
  * Description: 3des加解密
  * Trait S3Des
@@ -18,7 +18,7 @@ class S3Des
      */
     public static function encrypt($key, $input)
     { // 数据加密
-        $key = str_pad($key, 24, '0');
+        $key  = str_pad($key, 24, '0');
         $data = openssl_encrypt($input, 'des-ede3', $key, OPENSSL_RAW_DATA);
         $data = base64_encode($data);
         return $data;
@@ -34,7 +34,7 @@ class S3Des
     public static function decrypt($key, $encrypted)
     { // 数据解密
         $encrypted = base64_decode($encrypted);
-        $key = str_pad($key, 24, '0');
+        $key       = str_pad($key, 24, '0');
         $decrypted = openssl_decrypt($encrypted, 'des-ede3', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, '');
         //return self::pkcs5_unpad($decrypted);
         return $decrypted;

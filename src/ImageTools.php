@@ -2,6 +2,11 @@
 
 namespace phpTools;
 
+/**
+ * Desc: 图片处理相关的操作
+ * Author: tanxs@51cto.com
+ * DateTime: 2022/8/16 23:16
+ */
 class ImageTools
 {
     /**

@@ -10,7 +10,7 @@ namespace phpTools;
 
 
 /**
- * @Description: 验证类
+ * @Description: 验证类相关操作
  * @Class ValidateTools
  * @Package phpTools
  */

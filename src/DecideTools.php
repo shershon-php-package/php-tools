@@ -1,13 +1,6 @@
 <?php
-/**
- * @Description:
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 2:54 下午
- */
-
 
 namespace phpTools;
-
 
 /**
  * @Description: 判断相关的操作

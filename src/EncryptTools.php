@@ -1,13 +1,6 @@
 <?php
-/**
- * @Description:
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 5:08 下午
- */
-
 
 namespace phpTools;
-
 
 use phpTools\encrypt\Aes;
 use phpTools\encrypt\S3Des;

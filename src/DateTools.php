@@ -1,10 +1,4 @@
 <?php
-/**
- * @Description:
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 2:12 下午
- */
-
 
 namespace phpTools;
 

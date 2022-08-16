@@ -1,13 +1,6 @@
 <?php
-/**
- * @Description:
- * @Author: Mr.LiuQHui
- * @Date: 2020/7/17 1:54 下午
- */
-
 
 namespace phpTools;
-
 
 /**
  * @Description: 数组相关的操作
@@ -124,10 +117,10 @@ class ArrayTools
     public static function arrayFilterByEmptyKey($data, $key)
     {
         $ret = [];
-        foreach($data as $v1) {
+        foreach ($data as $v1) {
             $tmp = [];
-            foreach($v1 as $v2) {
-                if(!empty($v2[$key])){
+            foreach ($v1 as $v2) {
+                if (!empty($v2[$key])) {
                     $tmp[] = $v2;
                 }
             }
