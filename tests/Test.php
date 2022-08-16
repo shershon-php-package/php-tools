@@ -10,6 +10,7 @@ class Test extends TestCase
         $date = '2020-02-22';
         $d    = DateTools::getMonthRange($date);
         $a    = getcwd();
-        var_dump($a, $d);
+        $this->assertIsArray($d);
+        $this->assertEquals(__DIR__, $a);
     }
 }

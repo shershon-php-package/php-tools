@@ -4,10 +4,7 @@ use phpTools\client\RedisClient;
 use phpTools\RedisTools;
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-
-class Test extends TestCase
+class RedisTest extends TestCase
 {
     public function testGetVal()
     {

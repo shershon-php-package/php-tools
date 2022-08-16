@@ -33,5 +33,5 @@ composer require shershon1991/php-tools
 ## 代码测试
 ```sh
 cd tests
-php ***.php
+phpunit ArrayTest.php
 ```

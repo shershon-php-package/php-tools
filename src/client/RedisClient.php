@@ -24,7 +24,6 @@ class RedisClient
      */
     const DEFAULT_DB = 0;
 
-
     /**
      * @var object
      */

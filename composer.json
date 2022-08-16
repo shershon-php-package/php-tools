@@ -16,11 +16,13 @@
     "ext-json": "*",
     "ext-curl": "*",
     "ext-xml": "*",
-    "ext-gd": "*"
+    "ext-gd": "*",
+    "ext-redis": "*"
   },
   "autoload": {
     "psr-4": {
-      "phpTools\\": "src/"
+      "phpTools\\": "src/",
+      "ToolsTest\\": "tests"
     }
   },
   "license": "MIT",
