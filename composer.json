@@ -1,13 +1,13 @@
 {
   "name": "shershon-php-package/php-tools",
   "description": "收集PHP开发过程中经常用到的轮子，避免二次开发",
-  "homepage": "https://packagist.org/packages/shershon1991/php-tools",
+  "homepage": "https://packagist.org/packages/shershon-php-package/php-tools",
   "minimum-stability": "stable",
   "authors": [
     {
       "name": "Shershon",
       "email": "18810877074@163.com",
-      "homepage": "https://github.com/shershon1991/php-tools",
+      "homepage": "https://github.com/shershon-php-package/php-tools.git",
       "role": "Developer"
     }
   ],
