@@ -1,7 +1,6 @@
 {
-  "name": "shershon-php-package/php-tools",
+  "name": "shershon/php-tools",
   "description": "收集PHP开发过程中经常用到的轮子，避免二次开发",
-  "homepage": "https://packagist.org/packages/shershon-php-package/php-tools",
   "minimum-stability": "stable",
   "authors": [
     {

@@ -11,7 +11,7 @@ php >= 7.1
 
 ## 安装
 ```shell script
-composer require shershon-php-package/php-tools
+composer require shershon/php-tools
 ```
 ## 文件介绍
 | 文件               | 说明         |
