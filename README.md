@@ -31,7 +31,7 @@ composer require shershon/php-tools
 
 
 ## 代码测试
-```sh
-cd tests
-phpunit ArrayTest.php
+例如测试: RedisTest
+```bash
+phpunit -c phpunit.xml --colors=always tests/Cases/RedisTest.ph
 ```
