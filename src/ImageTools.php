@@ -1,6 +1,6 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * Desc: 图片处理相关的操作

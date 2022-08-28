@@ -1,15 +1,15 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
-use phpTools\encrypt\Aes;
-use phpTools\encrypt\S3Des;
-use phpTools\encrypt\Rsa;
+use PhpTools\encrypt\Aes;
+use PhpTools\encrypt\S3Des;
+use PhpTools\encrypt\Rsa;
 
 /**
  * @Description: 轻量级加解密
  * @Class EncryptTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class EncryptTools
 {

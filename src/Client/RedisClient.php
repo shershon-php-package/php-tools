@@ -1,13 +1,13 @@
 <?php
 
-namespace phpTools\client;
+namespace PhpTools\Client;
 
 use \Exception;
 
 /**
  * @Description: 连接redis类
  * @Class RedisClient
- * @Package phpTools\client
+ * @Package PhpTools\client
  */
 class RedisClient
 {

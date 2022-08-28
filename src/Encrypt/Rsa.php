@@ -1,6 +1,6 @@
 <?php
 
-namespace phpTools\encrypt;
+namespace PhpTools\Encrypt;
 
 class Rsa
 {

@@ -1,6 +1,8 @@
 <?php
 
-use phpTools\DateTools;
+namespace ToolsTest\Cases;
+
+use PhpTools\DateTools;
 use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
@@ -11,6 +13,5 @@ class Test extends TestCase
         $d    = DateTools::getMonthRange($date);
         $a    = getcwd();
         $this->assertIsArray($d);
-        $this->assertEquals(__DIR__, $a);
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace ToolsTest;
+namespace ToolsTest\Cases;
 
-use phpTools\ArrayTools;
+use PhpTools\ArrayTools;
 use PHPUnit\Framework\TestCase;
 
 class ArrayTest extends TestCase

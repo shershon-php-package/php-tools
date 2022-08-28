@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "phpTools\\": "src/",
+      "PhpTools\\": "src/",
       "ToolsTest\\": "tests"
     }
   },

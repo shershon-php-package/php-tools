@@ -1,6 +1,6 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 use \DateTime;
 use \Exception;
@@ -8,7 +8,7 @@ use \Exception;
 /**
  * @Description: 日期处理类
  * @Class DateTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class DateTools
 {

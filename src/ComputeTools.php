@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 计算相关的操作
  * @Class ComputeTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class ComputeTools
 {

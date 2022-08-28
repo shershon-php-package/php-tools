@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 文件操作类
  * @Class FileTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class FileTools
 {

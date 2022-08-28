@@ -1,7 +1,9 @@
 <?php
 
-use phpTools\client\RedisClient;
-use phpTools\RedisTools;
+namespace ToolsTest\Cases;
+
+use PhpTools\Client\RedisClient;
+use PhpTools\RedisTools;
 use PHPUnit\Framework\TestCase;
 
 class RedisTest extends TestCase
@@ -23,26 +25,26 @@ class RedisTest extends TestCase
     {
         $redis = new RedisTools('lockKey', 30, 5);
         $redis->connect();
-        $this->assertEquals($redis->getLock(), false);
+        $this->assertEquals($redis->getLock(), true);
     }
 
     public function testDelLock()
     {
         $redis = new RedisTools('lockKey', 30, 5);
         $redis->connect();
-        $this->assertEquals($redis->delLock(), 0);
+        $this->assertEquals($redis->delLock(), 1);
     }
 
     public function testGetAotomicLock()
     {
-        $redis = new RedisTools('lockKey', 30, 5);
+        $redis = new RedisTools('lockKey2', 30, 5);
         $redis->connect();
         $this->assertEquals($redis->getAotomicLock(), false);
     }
 
     public function testDelAotomicLock()
     {
-        $redis = new RedisTools('lockKey', 30, 5);
+        $redis = new RedisTools('lockKey2', 30, 5);
         $redis->connect();
         $this->assertEquals($redis->delAotomicLock(), 0);
     }

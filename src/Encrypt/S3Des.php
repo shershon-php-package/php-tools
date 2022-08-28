@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools\encrypt;
+namespace PhpTools\Encrypt;
 
 /**
  * Description: 3des加解密
  * Trait S3Des
- * @package phpTools\encrypt
+ * @package PhpTools\encrypt
  */
 class S3Des
 {

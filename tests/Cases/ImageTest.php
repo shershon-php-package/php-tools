@@ -1,7 +1,9 @@
 <?php
 
+namespace ToolsTest\Cases;
+
 use PHPUnit\Framework\TestCase;
-use phpTools\ImageTools;
+use PhpTools\ImageTools;
 
 class ImageTest extends TestCase
 {

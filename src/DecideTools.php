@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 判断相关的操作
  * @Class DecideTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class DecideTools
 {

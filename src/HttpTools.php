@@ -1,13 +1,13 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 use \Exception;
 
 /**
  * @Description: 与http请求相关的操作
  * @Class HttpTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class HttpTools
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 字符串相关操作
  * @Class StringTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class StringTools
 {

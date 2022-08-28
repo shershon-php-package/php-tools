@@ -6,13 +6,13 @@
  */
 
 
-namespace phpTools;
+namespace PhpTools;
 
 
 /**
  * @Description: 验证类相关操作
  * @Class ValidateTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class ValidateTools
 {

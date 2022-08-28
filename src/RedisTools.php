@@ -1,6 +1,6 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * Desc: Redis相关操作

@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 数组相关的操作
  * @Class ArrayTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class ArrayTools
 {

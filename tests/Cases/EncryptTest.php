@@ -1,7 +1,9 @@
 <?php
 
+namespace ToolsTest\Cases;
+
 use PHPUnit\Framework\TestCase;
-use phpTools\EncryptTools;
+use PhpTools\EncryptTools;
 
 class EncryptTest extends TestCase
 {

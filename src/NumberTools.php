@@ -1,11 +1,11 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * @Description: 数字相关的操作
  * @Class NumberTools
- * @Package phpTools
+ * @Package PhpTools
  */
 class NumberTools
 {

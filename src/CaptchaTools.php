@@ -1,6 +1,6 @@
 <?php
 
-namespace phpTools;
+namespace PhpTools;
 
 /**
  * Desc: 验证码相关的操作
