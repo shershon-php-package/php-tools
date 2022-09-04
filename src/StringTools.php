@@ -14,7 +14,7 @@ class StringTools
      * @param $str
      * @param string $encoding
      * @return bool|int
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function strlen(string $str, $encoding = 'UTF-8')
     {

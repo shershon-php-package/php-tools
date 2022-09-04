@@ -13,7 +13,7 @@ class ComputeTools
      * @description: 计算机存储单位 转换
      * @param $value
      * @return int|string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function convertBytes($value)
     {

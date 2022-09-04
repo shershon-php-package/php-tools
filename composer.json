@@ -16,7 +16,8 @@
     "ext-curl": "*",
     "ext-xml": "*",
     "ext-gd": "*",
-    "ext-redis": "*"
+    "ext-redis": "*",
+    "elasticsearch/elasticsearch": "^v7.13.3"
   },
   "autoload": {
     "psr-4": {

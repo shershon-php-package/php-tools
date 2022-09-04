@@ -33,7 +33,7 @@ class Aes
      * @param string $modeType
      * @param string $iv
      * @return string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function encrypt($key, $input, $modeType = self::AES_ECB, $iv = "")
     {
@@ -51,7 +51,7 @@ class Aes
      * @param string $modeType
      * @param string $iv
      * @return false|string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function decrypt($key, $sStr, $modeType = self::AES_ECB, $iv = "")
     {
@@ -75,7 +75,7 @@ class Aes
      * @param $lenKey
      * @param $modeType
      * @return string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function getMode($lenKey, $modeType)
     {

@@ -43,7 +43,7 @@ class HttpTools
      * @description: 获取国内随机IP地址(IPv4)
      * 注：适用于32位操作系统
      * @return string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function randIp()
     {
@@ -76,7 +76,7 @@ class HttpTools
      * @param null $header
      * @param int $timeout
      * @return array
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function multiCurl(
         $requestList,
@@ -319,7 +319,7 @@ class HttpTools
      * @param null $proxyPort
      * @return mixed
      * @throws Exception
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public static function post($url, $postFields = null, $header = null, $proxy = null, $proxyPort = null)
     {
@@ -335,7 +335,7 @@ class HttpTools
      * @param null $proxyPort
      * @return mixed
      * @throws Exception
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public static function get($url, $postFields = null, $header = null, $proxy = null, $proxyPort = null)
     {

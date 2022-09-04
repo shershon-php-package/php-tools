@@ -14,7 +14,7 @@ class S3Des
      * @param $key
      * @param $input
      * @return string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function encrypt($key, $input)
     { // 数据加密
@@ -29,7 +29,7 @@ class S3Des
      * @param $key
      * @param $encrypted
      * @return bool|string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function decrypt($key, $encrypted)
     { // 数据解密

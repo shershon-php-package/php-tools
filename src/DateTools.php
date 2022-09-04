@@ -18,7 +18,7 @@ class DateTools
      * @param $minutes
      * @param $seconds
      * @return string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function hourGenerate($hours, $minutes, $seconds)
     {
@@ -134,7 +134,7 @@ class DateTools
      * description: 获取当前日期所在的星期一和星期日
      * @param $date
      * @return array
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public static function getWeekRange($date)
     {
@@ -149,7 +149,7 @@ class DateTools
      * description: 获取当前日期所在的月末和月初
      * @param $date
      * @return array
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public static function getMonthRange($date)
     {
@@ -163,7 +163,7 @@ class DateTools
      * description: 美化时间
      * @param $time
      * @return false|string
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public function beautyTime($time)
     {

@@ -4,7 +4,7 @@ namespace PhpTools;
 
 /**
  * Desc: Redis相关操作
- * Author: tanxs@51cto.com
+ * Author: Shershon
  * DateTime: 2022/8/16 23:16
  */
 class RedisTools

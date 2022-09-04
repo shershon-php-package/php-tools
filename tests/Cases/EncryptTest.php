@@ -9,7 +9,7 @@ class EncryptTest extends TestCase
 {
     /**
      * Desc: 对称加密-3DES
-     * Author: tanxs@51cto.com
+     * Author: Shershon
      * DateTime: 2022/8/16 22:50
      * @return void
      */
@@ -27,7 +27,7 @@ class EncryptTest extends TestCase
 
     /**
      * Desc: 对称加密-AES
-     * Author: tanxs@51cto.com
+     * Author: Shershon
      * DateTime: 2022/8/16 22:50
      * @return void
      */
@@ -43,7 +43,7 @@ class EncryptTest extends TestCase
 
     /**
      * Desc: 非对称加密-RSA
-     * Author: tanxs@51cto.com
+     * Author: Shershon
      * DateTime: 2022/8/16 22:53
      * @return void
      */

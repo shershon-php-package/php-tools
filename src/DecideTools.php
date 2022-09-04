@@ -13,7 +13,7 @@ class DecideTools
      * @description: 判断是否为空
      * @param $field
      * @return bool
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function isEmpty($field)
     {

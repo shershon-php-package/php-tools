@@ -1,7 +1,7 @@
 <?php
 /**
  * @Description:
- * @Author: Mr.LiuQHui
+ * @Author: Shershon
  * @Date: 2020/7/17 3:03 下午
  */
 
@@ -433,7 +433,7 @@ class ValidateTools
      * description: 判断是否是合法的图片url
      * @param $imgUrl
      * @return bool
-     * @author: Mr.LiuQHui
+     * @author: Shershon
      */
     public static function isImgUrl($imgUrl)
     {

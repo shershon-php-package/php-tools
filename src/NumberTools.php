@@ -14,7 +14,7 @@ class NumberTools
      * @param $value
      * @param int $precision
      * @return float|int
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function getFloor($value, $precision = 0)
     {
@@ -34,7 +34,7 @@ class NumberTools
      * @description: 删除数字中非数字字符
      * @param $str
      * @return string|string[]|null
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      *  如：123abc456 ==> 123456
      */
     public static function trimNoNumString($str)

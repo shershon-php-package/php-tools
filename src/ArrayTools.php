@@ -14,7 +14,7 @@ class ArrayTools
      * @description: 对象转数组
      * @param $object
      * @return mixed
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function object2array($object)
     {
@@ -26,7 +26,7 @@ class ArrayTools
      * @description: xml转为数组
      * @param $xml
      * @return bool|mixed
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function xml2Array($xml)
     {
@@ -95,7 +95,7 @@ class ArrayTools
      * @param $sortKey
      * @param int $sortType // SORT_DESC SORT_ASC |SORT_DESC
      * @return mixed
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function arraySortByKey($data, $sortKey, $sortType = SORT_DESC)
     {

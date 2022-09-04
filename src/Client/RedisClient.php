@@ -56,8 +56,8 @@ class RedisClient
      * @description: 单例的方式连接redis
      * @param $config
      * @return mixed
-     * @throws \Exception
-     * @autor Mr.LiuQHui
+     * @throws Exception
+     * @autor Shershon
      */
     public static function getInstance($config): \Redis
     {
@@ -79,7 +79,7 @@ class RedisClient
                 $config = self::$_config;
             }
             if (!$config['host'] || !$config['port']) {
-                throw new \Exception('unknown host or port');
+                throw new Exception('unknown host or port');
             }
             $connectType = 'connect';
             if (self::$_usePersistent) {
@@ -100,7 +100,7 @@ class RedisClient
             if (isset($config['db']) && $config['db']) {
                 $r = self::$_client[$instanceKey]->select($config['db']);
                 if (!$r) {
-                    throw new \Exception("Redis select db {$config['db']} failure!");
+                    throw new Exception("Redis select db {$config['db']} failure!");
                 }
             }
         }

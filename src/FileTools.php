@@ -14,7 +14,7 @@ class FileTools
      * @description: 递归删除文件夹和文件
      * @param $dirname
      * @param bool $delete_self
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function recursiveDelete($dirname, $delete_self = true)
     {
@@ -41,7 +41,7 @@ class FileTools
      * @description: 遍历一个文件夹下的所有文件和子文件夹
      * @param $dir
      * @return array|bool
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function recursiveDeleteForeach($dir)
     {
@@ -74,7 +74,7 @@ class FileTools
      * @description: 获取文件扩展名
      * @param $file
      * @return string|string[]
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function getFileExtension($file)
     {
@@ -89,7 +89,7 @@ class FileTools
      * @description: 创建多级目录
      * @param $dir
      * @return bool
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function mkdirs($dir)
     {
@@ -106,7 +106,7 @@ class FileTools
      * @param $baseStr
      * @param $logPath
      * @return false|int|string
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function Base642Pdf(
         $fileName,
@@ -133,7 +133,7 @@ class FileTools
      * @description: 获取服务器配置允许最大上传文件大小
      * @param int $max_size
      * @return mixed //返回单位是 byte
-     * @autor Mr.LiuQHui
+     * @autor Shershon
      */
     public static function getMaxUploadSize($max_size = 0)
     {
