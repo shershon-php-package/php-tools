@@ -46,7 +46,9 @@ class ElasticClient
                 throw new Exception('unknown host or port');
             }
 
-            self::$_client[$instanceKey] = ClientBuilder::create()->setHosts(["{$config['host']}:{$config['port']}"])->build();
+            self::$_client[$instanceKey] = ClientBuilder::create()
+                ->setHosts(["{$config['host']}:{$config['port']}"])
+                ->build();
         }
         return self::$_client[$instanceKey];
     }

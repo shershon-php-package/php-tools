@@ -2,7 +2,6 @@
 
 namespace ToolsTest\Cases;
 
-use Elasticsearch\Client;
 use PhpTools\Client\ElasticClient;
 use PhpTools\ElasticTools;
 use PHPUnit\Framework\TestCase;
