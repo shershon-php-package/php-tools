@@ -14,14 +14,11 @@ class ElasticTools
 {
     protected $indexName;
 
-    protected $indexType;
-
     protected $client;
 
-    public function __construct($indexName, $indexType)
+    public function __construct($indexName)
     {
         $this->indexName = $indexName;
-        $this->indexType = $indexType;
         $config          = [
             'host' => '127.0.0.1',
             'port' => '9200',
@@ -38,7 +35,6 @@ class ElasticTools
     {
         return [
             'index' => $this->indexName,
-            'type'  => $this->indexType,
         ];
     }
 
@@ -74,7 +70,7 @@ class ElasticTools
     {
         $initParams         = $this->initParams();
         $initParams['body'] = $map;
-        return $this->client->indices()->putSettings($initParams);
+        return $this->client->index($initParams);
     }
 
     /**
@@ -115,9 +111,7 @@ class ElasticTools
     public function bulk($data)
     {
         if (empty($data['body'])) return false;
-        $params         = $this->initParams();
-        $params['body'] = $data['body'];
-        return $this->client->bulk($params);
+        return $this->client->bulk($data);
     }
 
     /**
@@ -131,6 +125,24 @@ class ElasticTools
         $params       = $this->initParams();
         $params['id'] = $id;
         $res          = $this->client->delete($params);
+        if (!isset($res['_shards']['successful'])) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 根据唯一id更新
+     *
+     * @param $data
+     * @return bool
+     */
+    public function updateById($data)
+    {
+        $params = $this->initParams();
+        isset($data['id']) && $params['id'] = $data['id'];
+        $params['body'] = $data['body'];
+        $res            = $this->client->update($params);
         if (!isset($res['_shards']['successful'])) {
             return false;
         }
