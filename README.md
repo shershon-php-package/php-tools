@@ -33,6 +33,7 @@ composer require shershon/php-tools
 | src/EncryptTools.php  | 加解密类     |
 | src/ImageTools.php    | 图片处理类    |
 | src/ElasticTools.php  | ES操作类    |
+| src/CaptchaTools.php  | 验证码操作类   |
 
 ## 代码测试
 
