@@ -17,7 +17,8 @@
     "ext-xml": "*",
     "ext-gd": "*",
     "ext-redis": "*",
-    "elasticsearch/elasticsearch": "^v7.13.3"
+    "elasticsearch/elasticsearch": "^v7.13.3",
+    "aliyunmq/mq-http-sdk": "1.0.3"
   },
   "autoload": {
     "psr-4": {

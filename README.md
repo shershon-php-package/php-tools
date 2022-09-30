@@ -18,22 +18,23 @@ composer require shershon/php-tools
 
 ## 文件介绍
 
-| 文件                    | 说明       |
-|-----------------------|----------|
-| src/ArrayTools.php    | 数组相关方法   |
-| src/ComputeTools.php  | 计算相关方法   |
-| src/DateTools.php     | 日期相关方法   |
-| src/DecideTools.php   | 判断相关方法   |
-| src/FileTools.php     | 文件相关方法   |
-| src/HttpTools.php     | http相关方法 |
-| src/NumberTools.php   | 数字相关方法   |
-| src/StringTools.php   | 字符串相关方法  |
-| src/ValidateTools.php | 验证相关方法   |
-| src/RedisTools.php    | Redis操作类 |
-| src/EncryptTools.php  | 加解密类     |
-| src/ImageTools.php    | 图片处理类    |
-| src/ElasticTools.php  | ES操作类    |
-| src/CaptchaTools.php  | 验证码操作类   |
+| 文件                    | 说明          |
+|-----------------------|-------------|
+| src/ArrayTools.php    | 数组相关方法      |
+| src/ComputeTools.php  | 计算相关方法      |
+| src/DateTools.php     | 日期相关方法      |
+| src/DecideTools.php   | 判断相关方法      |
+| src/FileTools.php     | 文件相关方法      |
+| src/HttpTools.php     | http相关方法    |
+| src/NumberTools.php   | 数字相关方法      |
+| src/StringTools.php   | 字符串相关方法     |
+| src/ValidateTools.php | 验证相关方法      |
+| src/RedisTools.php    | Redis操作类    |
+| src/EncryptTools.php  | 加解密类        |
+| src/ImageTools.php    | 图片处理类       |
+| src/ElasticTools.php  | ES操作类       |
+| src/CaptchaTools.php  | 验证码操作类      |
+| src/RocketmqTools.php  | Rocketmq操作类 |
 
 ## 代码测试
 

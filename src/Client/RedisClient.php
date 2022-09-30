@@ -66,6 +66,9 @@ class RedisClient
         }
         $instanceKey = md5(serialize($config));
         if (!isset(self::$_client[$instanceKey])) {
+            if (empty($config['host']) || empty($config['port'])) {
+                throw new Exception('unknown host or port');
+            }
             self::$_client[$instanceKey] = $redis = new \Redis();
             self::$_config               = [
                 'host'    => $config['host'],
@@ -73,15 +76,7 @@ class RedisClient
                 'db'      => self::DEFAULT_DB,
                 'timeout' => $config['timeout'] ?? 5
             ];
-            if (!empty($config)) {
-                $config = array_merge(self::$_config, $config);
-            } else {
-                $config = self::$_config;
-            }
-            if (!$config['host'] || !$config['port']) {
-                throw new Exception('unknown host or port');
-            }
-            $connectType = 'connect';
+            $connectType                 = 'connect';
             if (self::$_usePersistent) {
                 $connectType = 'pconnect';
             }
