@@ -53,15 +53,19 @@ php >= 7.1
 - composer require --ignore-platform-reqs shershon/php-tools
 - rm -rf vendor/shershon/php-tools/.git
 
-## 4.代码测试
+## 4.更新包版本
+- composer require --ignore-platform-reqs shershon/php-tools:1.0.0(替换成指定的版本)
+- rm -rf vendor/shershon/php-tools/.git
+- 
+## 5.代码测试
 
-### 4.1 测试全部用例
+### 5.1 测试全部用例
 
 ```bash
 phpunit -c phpunit.xml --colors=always tests/Cases/RedisTest.php
 ```
 
-### 4.2 测试单个用例
+### 5.2 测试单个用例
 
 ```bash
 phpunit -c phpunit.xml --colors=always tests/Cases/RedisTest.php --filter testGetVal
