@@ -1,4 +1,4 @@
-## 描述
+## 1.常用的工具包
 
 在做PHP项目过程做，会发现经常性的重复造轮子，为了以后少造轮子就 多收集日常开发过程中经常用到的轮子，避免二次开发。做个效率高的懒汉。
 
@@ -24,27 +24,44 @@
 
 **[查看源码](https://github.com/shershon-php-package/php-tools.git)**
 
-## 版本要求
+## 2.版本要求
 
 ```shell script
 php >= 7.1
 ```
 
-## 安装
+## 3.安装
 
-```shell script
-composer require shershon/php-tools
+- 配置composer.json
+```json
+{
+  "require-dev": {
+    "shershon/php-tools": "^1.0.0"
+  },
+  "config": {
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/shershon-php-package/php-tools.git"
+    }
+  ]
+}
 ```
 
-## 代码测试
+- composer require --ignore-platform-reqs shershon/php-tools
+- rm -rf vendor/shershon/php-tools/.git
 
-### 测试全部用例
+## 4.代码测试
+
+### 4.1 测试全部用例
 
 ```bash
 phpunit -c phpunit.xml --colors=always tests/Cases/RedisTest.php
 ```
 
-### 测试单个用例
+### 4.2 测试单个用例
 
 ```bash
 phpunit -c phpunit.xml --colors=always tests/Cases/RedisTest.php --filter testGetVal
